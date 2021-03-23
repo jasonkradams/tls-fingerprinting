@@ -48,6 +48,6 @@ for line in f.readlines():
   ec_point_fmt        = sanitizer(str(ec_point_fmt        ).encode('UTF-8').lower())
 
   # Set to a format we can digest in a data-group
-  print(record_tls_version + '+' + tls_version + '+' + ciphersuite_length + '+' + ciphersuite + '+' + compression_length + '+' + compression + '+' + extensions + '+' + e_curves + '+' + sig_alg + '+' + ec_point_fmt + ' := ' + desc)
+  print('"' + record_tls_version + '+' + tls_version + '+' + ciphersuite_length + '+' + ciphersuite + '+' + compression_length + '+' + compression + '+' + extensions + '+' + e_curves + '+' + sig_alg + '+' + ec_point_fmt + '" := "' + desc + '",')
 
 f.close()
